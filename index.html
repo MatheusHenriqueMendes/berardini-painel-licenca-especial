@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-tema="claro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Painel Licença Especial · Advocacia Escalável × Berardini</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ae-font:'Geologica','Segoe UI',system-ui,sans-serif;
+  --ae-bg:#F6F5FA; --ae-surface:#FFFFFF; --ae-surface-2:#EFEDF6; --ae-surface-3:#E7E4F2;
+  --ae-border:#E1DEEE; --ae-border-strong:#C9C4F5;
+  --ae-text:#2E294F; --ae-text-soft:#5B5878; --ae-text-faint:#6B6885;
+  --ae-brand:#2B2B6E; --ae-pink:#FF038F; --ae-pink-ink:#C70070; --ae-action:#C70070; --ae-action-ink:#FFF;
+  --ae-success:#147A5C; --ae-warn:#8B5A00; --ae-danger:#B23A20; --ae-info:#534C8C;
+  --ae-s1:#FF038F; --ae-s2:#534C8C; --ae-s3:#FA8C24; --ae-s4:#2B2B6E; --ae-s5:#8A83CC; --ae-s6:#FFD400;
+  color-scheme:light;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-tema="light"]){
+    --ae-bg:#171428; --ae-surface:#211E39; --ae-surface-2:#2E294F; --ae-surface-3:#3A3460;
+    --ae-border:#3D3862; --ae-border-strong:#534C8C;
+    --ae-text:#F3F1F8; --ae-text-soft:#B7B4C8; --ae-text-faint:#9895B0;
+    --ae-brand:#C9C4F5; --ae-pink-ink:#FF69B8; --ae-action:#FF69B8; --ae-action-ink:#1A1730;
+    --ae-success:#4FD69A; --ae-warn:#F0A94E; --ae-danger:#FF7B85; --ae-info:#C9C4F5;
+    --ae-s1:#FF69B8; --ae-s2:#8A83CC; --ae-s3:#FA8C24; --ae-s4:#C9C4F5; --ae-s5:#FF038F; --ae-s6:#FFD400;
+    color-scheme:dark;
+  }
+}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--ae-bg);color:var(--ae-text);font-family:var(--ae-font);font-size:14px;font-weight:400;line-height:1.5;-webkit-font-smoothing:antialiased}
+.fita{height:3px;background:linear-gradient(90deg,#2B2B6E 0%,#FF038F 100%)}
+.wrap{max-width:1080px;margin:0 auto;padding:0 16px 56px}
+header.topo{display:flex;align-items:center;gap:12px;padding:18px 0 14px;flex-wrap:wrap}
+.iso{width:26px;height:26px;flex:0 0 auto}
+.iso svg{width:100%;height:100%;display:block}
+.prod{font-size:13px;font-weight:400;letter-spacing:.06em;text-transform:uppercase;color:#534C8C;border-left:1px solid var(--ae-border-strong);padding-left:12px}
+.prod b{font-weight:800}
+.sub{font-size:12px;color:var(--ae-text-faint);width:100%;margin-top:-2px}
+h1{font-size:23px;font-weight:900;letter-spacing:-.022em;margin:14px 0 2px}
+h2{font-size:15px;font-weight:800;letter-spacing:-.01em;margin:26px 0 10px;display:flex;align-items:center;gap:8px}
+h2::before{content:"";width:3px;height:15px;background:var(--ae-pink);border-radius:2px}
+h3{font-size:13px;font-weight:700;margin:16px 0 6px}
+.rot{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--ae-text-faint)}
+.abas{display:flex;gap:4px;border-bottom:1px solid var(--ae-border);margin-top:14px;overflow-x:auto}
+.aba{appearance:none;border:0;background:none;font:inherit;font-weight:700;font-size:13px;color:var(--ae-text-soft);padding:9px 14px;cursor:pointer;border-bottom:2px solid transparent;white-space:nowrap}
+.aba[aria-selected="true"]{color:var(--ae-text);border-bottom-color:var(--ae-pink)}
+.aba:focus-visible,.chip:focus-visible{outline:2px solid var(--ae-pink);outline-offset:2px;border-radius:4px}
+.chips{display:flex;gap:6px;flex-wrap:wrap;margin:16px 0 4px}
+.chip{appearance:none;font:inherit;font-size:12px;font-weight:600;padding:5px 11px;border-radius:999px;border:1px solid var(--ae-border);background:var(--ae-surface);color:var(--ae-text-soft);cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--ae-brand);border-color:var(--ae-brand);color:#fff}
+@media (prefers-color-scheme:dark){:root:not([data-tema="light"]) .chip[aria-pressed="true"]{color:#1A1730}}
+.periodo{font-size:12px;color:var(--ae-text-faint);margin:6px 0 0}
+.grid{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(152px,1fr))}
+.card{background:var(--ae-surface);border:1px solid var(--ae-border);border-radius:10px;padding:13px 14px}
+.card .n{font-size:26px;font-weight:800;font-variant-numeric:tabular-nums;letter-spacing:-.02em;line-height:1.15;margin-top:3px}
+.card .pe{font-size:12px;color:var(--ae-text-soft);margin-top:2px}
+.card.mudo .n{color:var(--ae-text-faint);font-size:17px;font-weight:700}
+.painel{background:var(--ae-surface);border:1px solid var(--ae-border);border-radius:10px;padding:16px}
+.linha{display:grid;grid-template-columns:1fr;gap:5px;margin-bottom:11px}
+.linha .top{display:flex;justify-content:space-between;gap:10px;font-size:13px}
+.linha .top b{font-variant-numeric:tabular-nums;font-weight:800}
+.barra{height:7px;border-radius:4px;background:var(--ae-surface-2);overflow:hidden}
+.barra i{display:block;height:100%;border-radius:4px;background:var(--ae-s2)}
+.linha.destaque .barra i{background:var(--ae-pink)}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th{text-align:left;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--ae-text-faint);padding:7px 8px;background:var(--ae-surface-2)}
+td{padding:7px 8px;border-top:1px solid var(--ae-border);font-variant-numeric:tabular-nums}
+td:first-child,th:first-child{font-variant-numeric:normal}
+.rolagem{overflow-x:auto}
+.serie{display:flex;gap:14px;align-items:flex-end;min-height:120px;padding-top:6px}
+.dia{flex:1;min-width:48px;text-align:center}
+.pilha{display:flex;gap:3px;align-items:flex-end;justify-content:center;height:100px}
+.pilha span{width:12px;border-radius:3px 3px 0 0;display:block}
+.dia small{display:block;font-size:11px;color:var(--ae-text-faint);margin-top:6px}
+.leg{display:flex;gap:14px;flex-wrap:wrap;font-size:12px;color:var(--ae-text-soft);margin-top:10px}
+.leg i{display:inline-block;width:9px;height:9px;border-radius:2px;margin-right:5px}
+.nota{font-size:12px;color:var(--ae-text-faint);margin-top:10px}
+.sel{appearance:none;font:inherit;font-size:12px;font-weight:600;padding:5px 10px;border-radius:8px;border:1px solid var(--ae-border);background:var(--ae-surface);color:var(--ae-text)}
+.rep{border-left:3px solid var(--ae-pink);padding-left:14px;margin:12px 0 0}
+.rep p{margin:0 0 10px}
+.pri{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.04em;padding:2px 8px;border-radius:999px;margin-right:8px;vertical-align:1px}
+.p1{background:#FDE7E1;color:#B23A20}.p2{background:#FFEFD9;color:#8B5A00}.p3{background:#E7E4F2;color:#534C8C}
+@media (prefers-color-scheme:dark){:root:not([data-tema="light"]) .p1{background:#44201A;color:#FF7B85}:root:not([data-tema="light"]) .p2{background:#3D2E12;color:#F0A94E}:root:not([data-tema="light"]) .p3{background:#2E294F;color:#C9C4F5}}
+.item{background:var(--ae-surface);border:1px solid var(--ae-border);border-left:3px solid var(--ae-border-strong);border-radius:8px;padding:12px 14px;margin-bottom:9px}
+.item.alta{border-left-color:var(--ae-pink)}
+.item h4{margin:0 0 4px;font-size:13px;font-weight:800}
+.item p{margin:0;font-size:13px;color:var(--ae-text-soft)}
+.cit{font-size:13px;color:var(--ae-text-soft);border-left:2px solid var(--ae-border-strong);padding-left:10px;margin:8px 0}
+.pe-rodape{font-size:12px;color:var(--ae-text-faint);border-top:1px solid var(--ae-border);margin-top:34px;padding-top:12px}
+[hidden]{display:none !important}
+</style>
+</head>
+<body>
+<div class="fita"></div>
+<div class="wrap">
+  <header class="topo">
+    <span class="iso"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 174.1 141.3" role="img" aria-label="Advocacia Escalável"> <defs> <linearGradient id="ae-iso" x1="0" y1="0" x2="1" y2="0"> <stop offset="0" stop-color="#2B2B6E"/> <stop offset="1" stop-color="#FF038F"/> </linearGradient> </defs> <g transform="translate(-195.367 -160.391)"> <path fill="url(#ae-iso)" d="M 348.832031 164.941406 C 348.496094 165.472656 348.148438 166.011719 347.804688 166.542969 C 314.339844 218.347656 263.660156 257.996094 203.835938 277.371094 C 202.160156 277.914062 200.574219 278.746094 199.183594 279.835938 C 196.824219 282.140625 195.367188 285.347656 195.367188 288.914062 C 195.367188 290.558594 195.679688 292.289062 196.371094 294.039062 C 198.207031 298.664062 202.800781 301.609375 207.777344 301.609375 C 208.691406 301.597656 209.613281 301.503906 210.503906 301.304688 L 212.003906 300.980469 L 315.511719 278.441406 L 318.835938 277.71875 C 319.746094 277.519531 320.679688 277.425781 321.613281 277.507812 C 323.15625 277.652344 324.601562 278.0625 325.933594 278.703125 C 326.6875 279.070312 327.378906 279.5625 328.007812 280.128906 L 330.273438 282.140625 L 346.890625 296.890625 L 348.578125 298.390625 C 350.203125 299.839844 352.144531 300.9375 354.269531 301.359375 C 355.570312 301.621094 356.945312 301.683594 358.359375 301.503906 C 364.777344 300.71875 369.464844 295.035156 369.464844 288.578125 L 369.464844 172.613281 C 369.464844 172.5625 369.464844 172.511719 369.453125 172.457031 L 369.453125 172.351562 C 369.367188 167.695312 366.769531 163.660156 362.964844 161.523438 C 362.953125 161.511719 362.933594 161.511719 362.921875 161.503906 C 361.421875 160.789062 359.753906 160.390625 357.984375 160.390625 C 354.25 160.390625 350.929688 162.171875 348.832031 164.941406"/> </g> </svg></span>
+    <span class="prod">PAINEL <b>LICENÇA ESPECIAL</b></span>
+    <span class="sub">Parceria Advocacia Escalável × Berardini · PM e BM de Santa Catarina · dados de <span class="ger">—</span></span>
+  </header>
+
+  <div class="abas" role="tablist">
+    <button class="aba" id="t1" role="tab" aria-selected="true" aria-controls="p1">Análise quantitativa</button>
+    <button class="aba" id="t2" role="tab" aria-selected="false" aria-controls="p2">Análise qualitativa</button>
+  </div>
+
+  <section id="p1" role="tabpanel" aria-labelledby="t1">
+    <div class="chips" id="filtros"></div>
+    <p class="periodo" id="rotuloPeriodo"></p>
+
+    <h2>Aquisição e triagem</h2>
+    <div class="grid" id="kpiTriagem"></div>
+    <p class="nota">Leads contam pela data de criação do negócio. Triagem (qualificado, desqualificado, verificação manual) conta pela data da última movimentação do card, que é quando o robô do eproc grava o resultado.</p>
+
+    <h2>Acionamento pela API oficial</h2>
+    <div class="grid" id="kpiApi"></div>
+    <p class="nota">Mensagens enviadas e entregues vêm da API da Meta, por dia. Um lead pode receber até 4 mensagens, uma por telefone do card, por isso o número de mensagens é maior que o de leads acionados. O card guarda apenas a data do último disparo, então um lead que avançou na régua aparece no dia da mensagem mais recente, não no dia do primeiro contato.</p>
+
+    <h2>Trabalho no CRM</h2>
+    <div class="grid" id="kpiCrm"></div>
+
+    <h2>Funil</h2>
+    <div class="painel" id="funil"></div>
+
+    <h2>Não fechados, por motivo</h2>
+    <div class="painel" id="motivos"></div>
+
+    <h2>Linha do tempo</h2>
+    <div class="painel">
+      <div class="serie" id="serie"></div>
+      <div class="leg">
+        <span><i style="background:var(--ae-s4)"></i>Leads triados</span>
+        <span><i style="background:var(--ae-s1)"></i>Leads acionados</span>
+        <span><i style="background:var(--ae-s3)"></i>Perdidos</span>
+      </div>
+    </div>
+
+    <h2>Report IA</h2>
+    <div class="painel">
+      <p class="rot">Leitura de <span class="ger">—</span> · prioridade para resolução</p>
+      <div id="report"></div>
+    </div>
+  </section>
+
+  <section id="p2" role="tabpanel" aria-labelledby="t2" hidden>
+    <div id="qualitativo"></div>
+  </section>
+
+  <p class="pe-rodape">Fontes: Bitrix24 (funil Comercial | Berardini), API Cloud da Meta e comentários da timeline dos negócios. Atualizado automaticamente de hora em hora, de segunda a sexta. Último retrato: <span class="ger">—</span>. Uso interno.</p>
+</div>
+
+<script>
+function montar(D, T){
+  var ST = D.stages;
+  var HOJE = '2026-10-22';
+  var fmt = function(n){ return (n||0).toLocaleString('pt-BR'); };
+  var pct = function(a,b){ return b ? (a/b*100).toFixed(1).replace('.',',')+'%' : '—'; };
+
+  var QUALIF = ['NEW','UC_D7KP3J','UC_U0XDEG','UC_SLC2N2','UC_XTDXJY','UC_B8Z0GS','UC_J9P4RW','UC_X1LEAO','UC_G18436','UC_MBUAZE','UC_1X2NEE','UC_6YQO76','WON'];
+  var CONTATO = ['UC_U0XDEG','UC_SLC2N2','UC_XTDXJY','UC_B8Z0GS','UC_J9P4RW','UC_X1LEAO','UC_G18436','UC_MBUAZE','UC_1X2NEE','UC_6YQO76'];
+  var ORDEM = ['UC_29GPC9','UC_YFCU0X','NEW','UC_D7KP3J','UC_U0XDEG','UC_SLC2N2','UC_XTDXJY','UC_J9P4RW','UC_B8Z0GS','UC_X1LEAO','UC_G18436','UC_MBUAZE','UC_1X2NEE','UC_6YQO76','WON','LOSE'];
+
+  function dia(d, n){ var x = new Date(d + 'T12:00:00'); x.setDate(x.getDate() + n); return x.toISOString().slice(0,10); }
+  var hoje = D.gerado;
+  var dow = new Date(hoje + 'T12:00:00').getDay();          // 0 = domingo
+  var seg = dia(hoje, -((dow + 6) % 7));                     // segunda desta semana
+  var PERIODOS = [
+    {id:'hoje', nome:'Hoje', ini:hoje, fim:hoje},
+    {id:'ontem', nome:'Ontem', ini:dia(hoje,-1), fim:dia(hoje,-1)},
+    {id:'semana', nome:'Semana', ini:seg, fim:dia(seg,6)},
+    {id:'semanaant', nome:'Semana anterior', ini:dia(seg,-7), fim:dia(seg,-1)},
+    {id:'quinzena', nome:'Quinzena', ini:dia(hoje,-14), fim:hoje},
+    {id:'mes', nome:'Mês', ini:hoje.slice(0,8) + '01', fim:dia(hoje.slice(0,8) + '01', 31).slice(0,8) + '01'},
+    {id:'tudo', nome:'Tudo', ini:'2000-01-01', fim:'2099-12-31'}
+  ];
+  var atual = 'tudo';
+
+  function dentro(d,p){ return d && d >= p.ini && d <= p.fim; }
+  function brDia(s){ var p=s.split('-'); return p[2]+'/'+p[1]; }
+
+  function calcula(p){
+    var r = {criados:0, qualificados:0, desqualificados:0, manual:0, porTriar:0,
+             acionados:0, enviadas:0, entregues:0, emContato:0, fechados:0, naoFechados:0,
+             motivos:{}, etapas:{}, lead:[], dias:{}};
+    if (dentro('2026-10-19', p)) r.criados += D.base;
+    if (dentro('2026-10-20', p)) r.porTriar += D.base;
+    r.etapas['UC_29GPC9'] = D.base;
+    D.rows.forEach(function(x){
+      if (dentro(x.c,p)) r.criados++;
+      r.etapas[x.s] = (r.etapas[x.s]||0)+1;
+      var desq = (x.s === 'LOSE' && x.mo === 'Já tem processo');
+      if (dentro(x.m,p)){
+        if (desq) r.desqualificados++;
+        else if (x.s === 'UC_YFCU0X') r.manual++;
+        else if (QUALIF.indexOf(x.s) >= 0 || x.s === 'LOSE') r.qualificados++;
+        (r.dias[x.m] = r.dias[x.m] || {t:0,a:0,p:0}).t++;
+      }
+      if (x.d && dentro(x.d,p)){ r.acionados++; (r.dias[x.d] = r.dias[x.d] || {t:0,a:0,p:0}).a++; }
+      if (CONTATO.indexOf(x.s) >= 0) r.emContato++;
+      if (x.f && dentro(x.f,p)){
+        if (x.s === 'WON'){ r.fechados++; }
+        if (x.s === 'LOSE'){
+          r.naoFechados++;
+          r.motivos[x.mo || 'Sem motivo informado'] = (r.motivos[x.mo || 'Sem motivo informado']||0)+1;
+          (r.dias[x.f] = r.dias[x.f] || {t:0,a:0,p:0}).p++;
+          var di = (new Date(x.f) - new Date(x.c))/86400000;
+          if (di >= 0) r.lead.push(di);
+        }
+      }
+    });
+    D.meta.dias.forEach(function(m){ if (dentro(m.d,p)){ r.enviadas += m.sent; r.entregues += m.delivered; } });
+    return r;
+  }
+
+  function cartao(rot,num,pe,mudo){
+    return '<div class="card'+(mudo?' mudo':'')+'"><div class="rot">'+rot+'</div><div class="n">'+num+'</div>'+(pe?'<div class="pe">'+pe+'</div>':'')+'</div>';
+  }
+
+  function barras(alvo, itens, destaque){
+    var max = itens.reduce(function(m,i){ return Math.max(m,i[1]); }, 0) || 1;
+    alvo.innerHTML = itens.map(function(i){
+      return '<div class="linha'+(destaque && destaque.indexOf(i[0])>=0 ? ' destaque':'')+'">'+
+        '<div class="top"><span>'+i[0]+'</span><b>'+fmt(i[1])+'</b></div>'+
+        '<div class="barra"><i style="width:'+Math.max(1,(i[1]/max*100))+'%"></i></div></div>';
+    }).join('') || '<p class="nota">Sem dados no período.</p>';
+  }
+
+  function pinta(){
+    var p = PERIODOS.filter(function(x){ return x.id === atual; })[0];
+    var r = calcula(p);
+    document.getElementById('rotuloPeriodo').textContent =
+      (p.id === 'tudo' ? 'Toda a operação, desde o início da base.' : 'Período: ' + brDia(p.ini) + ' a ' + brDia(p.fim) + '.');
+
+    var triados = r.qualificados + r.desqualificados + r.manual;
+    document.getElementById('kpiTriagem').innerHTML =
+      cartao('Leads na base', fmt(r.criados), 'negócios criados no período') +
+      cartao('Qualificados', fmt(r.qualificados), 'sem processo · ' + pct(r.qualificados, triados) + ' dos triados') +
+      cartao('Desqualificados', fmt(r.desqualificados), 'já tem processo · ' + pct(r.desqualificados, triados) + ' dos triados') +
+      cartao('Verificação manual', fmt(r.manual), 'não deu para definir') +
+      cartao('Fila por triar', fmt(D.base), 'parados na importação', true);
+
+    var entrega = r.enviadas ? pct(r.entregues, r.enviadas) : '—';
+    document.getElementById('kpiApi').innerHTML =
+      cartao('Leads acionados', fmt(r.acionados), 'receberam ao menos 1 mensagem') +
+      cartao('Mensagens enviadas', fmt(r.enviadas), 'pela API oficial') +
+      cartao('Entregues', fmt(r.entregues), entrega + ' do enviado') +
+      cartao('Teto do número', fmt(250), D.meta.tier + ' · ' + pct(r.acionados, 250) + ' usado') +
+      cartao('Visualizadas', 'sem medição', 'insights da Meta desligados', true) +
+      cartao('Respondidas', 'sem medição', 'depende de webhook de entrada', true);
+
+    var mediaLead = r.lead.length ? (r.lead.reduce(function(a,b){return a+b;},0)/r.lead.length) : null;
+    document.getElementById('kpiCrm').innerHTML =
+      cartao('Negócios em contato', fmt(r.emContato), 'posição atual, 1º contato em diante') +
+      cartao('Negócio fechado', fmt(r.fechados), 'contratos assinados') +
+      cartao('Não fechados', fmt(r.naoFechados), 'encerrados no período') +
+      cartao('Leadtime de encerramento', mediaLead === null ? '—' : mediaLead.toFixed(1).replace('.',',') + ' d', 'da criação até o encerramento');
+
+    var fun = ORDEM.filter(function(s){ return r.etapas[s]; }).map(function(s){ return [ST[s] || s, r.etapas[s]]; });
+    barras(document.getElementById('funil'), fun, ['1º contato','Qualifação']);
+
+    var mot = Object.keys(r.motivos).map(function(k){ return [k, r.motivos[k]]; }).sort(function(a,b){ return b[1]-a[1]; });
+    barras(document.getElementById('motivos'), mot, ['Já tem processo']);
+
+    var dias = Object.keys(r.dias).sort();
+    var maxd = dias.reduce(function(m,d){ var x=r.dias[d]; return Math.max(m,x.t,x.a,x.p); },0) || 1;
+    document.getElementById('serie').innerHTML = dias.length ? dias.map(function(d){
+      var x = r.dias[d];
+      function b(v,c){ return '<span style="height:'+Math.max(2,v/maxd*100)+'px;background:'+c+'" title="'+fmt(v)+'"></span>'; }
+      return '<div class="dia"><div class="pilha">'+b(x.t,'var(--ae-s4)')+b(x.a,'var(--ae-s1)')+b(x.p,'var(--ae-s3)')+'</div><small>'+brDia(d)+'</small></div>';
+    }).join('') : '<p class="nota">Sem movimentação no período.</p>';
+  }
+
+  var cx = document.getElementById('filtros');
+  cx.innerHTML = PERIODOS.map(function(p){ return '<button class="chip" data-id="'+p.id+'" aria-pressed="'+(p.id===atual)+'">'+p.nome+'</button>'; }).join('');
+  cx.addEventListener('click', function(e){
+    var b = e.target.closest('.chip'); if(!b) return;
+    atual = b.dataset.id;
+    Array.prototype.forEach.call(cx.children, function(c){ c.setAttribute('aria-pressed', c.dataset.id === atual); });
+    pinta();
+  });
+
+  var abas = document.querySelectorAll('.aba');
+  Array.prototype.forEach.call(abas, function(a){
+    a.addEventListener('click', function(){
+      Array.prototype.forEach.call(abas, function(b){
+        var on = b === a;
+        b.setAttribute('aria-selected', on);
+        document.getElementById(b.getAttribute('aria-controls')).hidden = !on;
+      });
+    });
+  });
+
+  Array.prototype.forEach.call(document.querySelectorAll('.ger'), function(e){ e.textContent = D.geradoEm || D.gerado; });
+  document.getElementById('report').innerHTML = T.report || '';
+  document.getElementById('qualitativo').innerHTML = T.qualitativo || '';
+  pinta();
+}
+
+var v = '?v=' + Date.now();
+Promise.all([
+  fetch('dados.json' + v).then(function(r){ return r.json(); }),
+  fetch('textos.json' + v).then(function(r){ return r.json(); }).catch(function(){ return {}; })
+]).then(function(r){ montar(r[0], r[1]); })
+  .catch(function(e){
+    document.getElementById('kpiTriagem').innerHTML =
+      '<p class="nota">Não foi possível carregar os dados do painel (' + e.message + '). Atualize a página em alguns minutos.</p>';
+  });
+</script>
+</body>
+</html>
