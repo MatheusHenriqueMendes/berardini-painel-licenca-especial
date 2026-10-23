@@ -1,0 +1,42 @@
+name: Atualiza o painel
+
+on:
+  schedule:
+    - cron: '7 * * * *'      # de hora em hora, aos 7 minutos (UTC)
+  workflow_dispatch:          # permite rodar na mão pela aba Actions
+
+permissions:
+  contents: write
+
+concurrency:
+  group: atualiza-painel
+  cancel-in-progress: false
+
+jobs:
+  atualizar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Gera o dados.json
+        env:
+          BITRIX_WEBHOOK: ${{ secrets.BITRIX_WEBHOOK }}
+          META_TOKEN: ${{ secrets.META_TOKEN }}
+          WABA_ID: ${{ secrets.WABA_ID }}
+        run: python scripts/atualiza.py
+
+      - name: Publica se mudou
+        run: |
+          if [ -z "$(git status --porcelain dados.json)" ]; then
+            echo "Sem mudanca nos dados."
+            exit 0
+          fi
+          git config user.name "painel-bot"
+          git config user.email "painel-bot@users.noreply.github.com"
+          git add dados.json
+          git commit -m "Atualiza dados do painel ($(TZ=America/Sao_Paulo date '+%d/%m %H:%M'))"
+          git push
